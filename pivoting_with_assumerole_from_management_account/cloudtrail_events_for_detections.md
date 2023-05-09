@@ -1,6 +1,7 @@
 ## SCP Policy Changes
 
 ### Create new SCP
+
 ```json
 {
     "eventVersion": "1.08",
@@ -57,9 +58,11 @@
         "clientProvidedHostHeader": "organizations.us-east-1.amazonaws.com"
     },
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ### Attach SCP to Member Account
+
 ```json
 {
     "eventVersion": "1.08",
@@ -102,7 +105,8 @@
         "clientProvidedHostHeader": "organizations.us-east-1.amazonaws.com"
     },
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ### Update SCP policy
 ```json
@@ -161,7 +165,8 @@
         "clientProvidedHostHeader": "organizations.us-east-1.amazonaws.com"
     },
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ### Detatch SCP from Member Account
 ```json
@@ -206,7 +211,8 @@
         "clientProvidedHostHeader": "organizations.us-east-1.amazonaws.com"
     },
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ### Disable SCP entirely
 ```json
@@ -263,7 +269,8 @@
         "clientProvidedHostHeader": "organizations.us-east-1.amazonaws.com"
     },
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ## Organizations
 
@@ -317,7 +324,8 @@
         "clientProvidedHostHeader": "organizations.us-east-1.amazonaws.com"
     },
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ## Identity Center
 
@@ -376,7 +384,8 @@
         "clientProvidedHostHeader": "up.sso.us-east-1.amazonaws.com"
     },
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ### Add User to Group in Identity Center
 ```json
@@ -424,7 +433,8 @@
         "clientProvidedHostHeader": "up.sso.us-east-1.amazonaws.com"
     },
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ### Create Permissions Set in Identity Center
 ```json
@@ -473,7 +483,8 @@
     "recipientAccountId": "<MANAGEMENT_ACCT_ID>",
     "eventCategory": "Management",
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ### Add New Group with Permissions Set to AWS Account in Identity Center
 ```json
@@ -527,7 +538,8 @@
     "recipientAccountId": "<MANAGEMENT_ACCT_ID>",
     "eventCategory": "Management",
     "sessionCredentialFromConsole": "true"
-}```
+}
+```
 
 ### Update Group assigned to AWS Account to new Permissions Set in Identity Center
 ```json
@@ -579,7 +591,10 @@
     "recipientAccountId": "<MANAGEMENT_ACCT_ID>",
     "eventCategory": "Management",
     "sessionCredentialFromConsole": "true"
-}``````json
+}
+```
+
+```json
 {
     "eventVersion": "1.08",
     "userIdentity": {
@@ -617,7 +632,10 @@
     "recipientAccountId": "<MANAGEMENT_ACCT_ID>",
     "eventCategory": "Management",
     "sessionCredentialFromConsole": "true"
-}``````json
+}
+```
+
+```json
 {
     "eventVersion": "1.08",
     "userIdentity": {
@@ -668,7 +686,10 @@
     "recipientAccountId": "<MANAGEMENT_ACCT_ID>",
     "eventCategory": "Management",
     "sessionCredentialFromConsole": "true"
-}``````json
+}
+```
+
+```json
 {
     "eventVersion": "1.08",
     "userIdentity": {
@@ -719,7 +740,10 @@
     "recipientAccountId": "<MANAGEMENT_ACCT_ID>",
     "eventCategory": "Management",
     "sessionCredentialFromConsole": "true"
-}``````json
+}
+```
+
+```json
 {
     "eventVersion": "1.08",
     "userIdentity": {
@@ -762,7 +786,10 @@
     "managementEvent": true,
     "recipientAccountId": "<MANAGEMENT_ACCT_ID>",
     "eventCategory": "Management"
-}``````json
+}
+```
+
+```json
 {
     "eventVersion": "1.08",
     "userIdentity": {
@@ -804,5 +831,6 @@
     "managementEvent": true,
     "recipientAccountId": "<MANAGEMENT_ACCT_ID>",
     "eventCategory": "Management"
-}```
+}
+```
 
