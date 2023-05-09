@@ -1,6 +1,26 @@
+## Table of Contents  
+- [Table of Contents](#table-of-contents)
+- [SCP Policy Changes](#scp-policy-changes)
+  - [Create new SCP](#create-new-scp)
+  - [Attach SCP to Member Account](#attach-scp-to-member-account)
+  - [Update SCP policy](#update-scp-policy)
+  - [Detatch SCP from Member Account](#detatch-scp-from-member-account)
+  - [Disable SCP entirely](#disable-scp-entirely)
+- [Organizations](#organizations)
+  - [Delegate Administration for AWS Organizations](#delegate-administration-for-aws-organizations)
+- [Identity Center](#identity-center)
+  - [Create Group in Identity Center](#create-group-in-identity-center)
+  - [Add User to Group in Identity Center](#add-user-to-group-in-identity-center)
+  - [Create Permissions Set in Identity Center](#create-permissions-set-in-identity-center)
+  - [Add New Group with Permissions Set to AWS Account in Identity Center](#add-new-group-with-permissions-set-to-aws-account-in-identity-center)
+  - [Update Group assigned to AWS Account to new Permissions Set in Identity Center](#update-group-assigned-to-aws-account-to-new-permissions-set-in-identity-center)
+
+<a name="scp_policy_changes"/>
 ## SCP Policy Changes
 
-### Create new SCP from root account in CT account
+<a name="create_new_scp_from_root_account_in_mgmt_account"/>
+### Create new SCP
+
 ```json
 {
     "eventVersion": "1.08",
@@ -60,7 +80,9 @@
 }
 ```
 
-### Attach SCP to Member Account in CT from root account
+<a name="attach_scp_to_member_account"/>
+### Attach SCP to Member Account
+
 ```json
 {
     "eventVersion": "1.08",
@@ -106,7 +128,9 @@
 }
 ```
 
+<a name="update_scp_policy"/>
 ### Update SCP policy
+
 ```json
 {
     "eventVersion": "1.08",
@@ -166,7 +190,9 @@
 }
 ```
 
-### Detatch SCP to Member Account in CT from root account
+<a name="detach_scp_from_member_account"/>
+### Detatch SCP from Member Account
+
 ```json
 {
     "eventVersion": "1.08",
@@ -212,7 +238,9 @@
 }
 ```
 
-### Disable SCP entirely from CT root account
+<a name="disable_scp_entirely"/>
+### Disable SCP entirely
+
 ```json
 {
     "eventVersion": "1.08",
@@ -270,9 +298,12 @@
 }
 ```
 
+<a name="organizations"/>
 ## Organizations
 
+<a name="delegate_admin_for_aws_organizations"/>
 ### Delegate Administration for AWS Organizations
+
 ```json
 {
     "eventVersion": "1.08",
@@ -325,9 +356,12 @@
 }
 ```
 
+<a name="identity_center"/>
 ## Identity Center
 
-### Create Group in IAM Identity Center
+<a name="create_group_in_identity_center"/>
+### Create Group in Identity Center
+
 ```json
 {
     "eventVersion": "1.08",
@@ -385,7 +419,9 @@
 }
 ```
 
-### Add User to Group in IAM Identity Center
+<a name="add_user_to_group_in_identity_center"/>
+### Add User to Group in Identity Center
+
 ```json
 {
     "eventVersion": "1.08",
@@ -434,7 +470,9 @@
 }
 ```
 
+<a name="create_permissions_set_in_identity_center"/>
 ### Create Permissions Set in Identity Center
+
 ```json
 {
     "eventVersion": "1.08",
@@ -484,7 +522,9 @@
 }
 ```
 
+<a name="add_group_with_permissions_set_to_aws_account_in_identity_center"/>
 ### Add New Group with Permissions Set to AWS Account in Identity Center
+
 ```json
 {
     "eventVersion": "1.08",
@@ -539,7 +579,9 @@
 }
 ```
 
+<a name="update_group_assigned_to_aws_account_to_new_permissions_set_in_identity_center"/>
 ### Update Group assigned to AWS Account to new Permissions Set in Identity Center
+
 ```json
 {
     "eventVersion": "1.08",
