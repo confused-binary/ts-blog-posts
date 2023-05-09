@@ -166,7 +166,7 @@
 }
 ```
 
-## Detatch SCP to Member Account in CT from root account
+### Detatch SCP to Member Account in CT from root account
 ```json
 {
     "eventVersion": "1.08",
