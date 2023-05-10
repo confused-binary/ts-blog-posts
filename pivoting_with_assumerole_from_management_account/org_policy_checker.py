@@ -137,6 +137,9 @@ def do_the_stuff():
 ###############
 
 if __name__ == '__main__':
+    """
+    This script can be used to backup SCP assignments and potentially restore them if needed
+    """
     # Process CLI Arguments
     ARGS = parse_cli_args()
 
