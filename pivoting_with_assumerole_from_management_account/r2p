@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Drop into some PATH and pass json formatted AWS API response to it
+# Drop into some PATH and pass json formatted AWS API response for assume-role to it
 import os
 import sys
 import json
@@ -22,10 +22,8 @@ config.read(HOME + '/.aws/credentials')
 
 # If profile entry existed with a region, save it
 region = False
-if ARGS.profile in config:
-    if 'region' in config[ARGS.profile]:
-        region = config[ARGS.profile]['region']
-
+if ARGS.profile in config and 'region' in config[ARGS.profile]:
+    region = config[ARGS.profile]['region']
 
 access_key = data.get('Credentials', {}).get('AccessKeyId') or data.get('AccessKeyId')
 secret_key = data.get('Credentials', {}).get('SecretAccessKey') or data.get('SecretAccessKey')
