@@ -11,14 +11,11 @@ def parse_cli_args():
     """
     parser = argparse.ArgumentParser(description='Lambda Version Scanner.')
     
-    # AWS Credentials Arguments
     parser.add_argument('--profile', default='default', help="Specify profile in credentials file to use. Defaults to 'default'.")
     parser.add_argument('--filter', default=['ALL'], nargs='+', help="Specify the policy type to check (SERVICE_CONTROL_POLICY, AISERVICES_OPT_OUT_POLICY, BACKUP_POLICY, TAG_POLICY). Defaults to 'ALL'")
     parser.add_argument('--mode', default='save', help="Specify 'save' to backup policy assignments to json. Specify 'restore' to restore policy assignment from json. Defaults to 'save'")
     parser.add_argument('--print-only', action='store_true', default=False, help="Just print output to screen. Doesn't save to file. Defaults to 'False'")
     parser.add_argument('--file', default='aws_orgs_policy_assignments.json', help="json file to save to or restore from. Default: aws_orgs_policy_assignments.json")
-
-    # Script Operations Arguments
     parser.add_argument('--verbose', action='store_true', default=False, help=f"Report output every step of the way. Defaults to 'False'")
     
     arrrrrgs = parser.parse_args()
@@ -33,7 +30,7 @@ def boto_session_setup():
     SESSION = boto3.session.Session(profile_name=ARGS.profile)
     try:
         sts_session = SESSION.client('sts')
-        ACCOUNT_ID = sts_session.get_caller_identity().get("Account", "_PLACEHOLDER")
+        ACCOUNT_ID = sts_session.get_caller_identity().get("Account")
         if ARGS.verbose:
             print(f"Validated BOTO3 Session for Account #{ACCOUNT_ID}")
     except ClientError as error:
