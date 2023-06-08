@@ -17,6 +17,7 @@ def parse_cli_args():
     parser.add_argument('-a', "--actions", nargs='+', default=['xlsx'], help="Specify report format (csv, xlsx, png). Defaults to xlsx")
     parser.add_argument('-r', "--resource", nargs='+', default=['xlsx'], help="Specify report format (csv, xlsx, png). Defaults to xlsx")
     arrrrrgs = parser.parse_args()
+    
     return arrrrrgs
 
 
