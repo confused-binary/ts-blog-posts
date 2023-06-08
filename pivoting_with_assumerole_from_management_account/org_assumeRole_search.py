@@ -24,7 +24,7 @@ def boto_session_setup():
     SESSION = boto3.session.Session(profile_name=ARGS.profile)
     try:
         sts_session = SESSION.client('sts')
-        ACCOUNT_ID = sts_session.get_caller_identity().get("Account", "_PLACEHOLDER")
+        ACCOUNT_ID = sts_session.get_caller_identity().get("Account")
     except ClientError as error:
         print(error)
         sys.exit()
