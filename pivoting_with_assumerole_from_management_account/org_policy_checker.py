@@ -17,8 +17,8 @@ def parse_cli_args():
     parser.add_argument('--print-only', action='store_true', default=False, help="Just print output to screen. Doesn't save to file. Defaults to 'False'")
     parser.add_argument('--file', default='aws_orgs_policy_assignments.json', help="json file to save to or restore from. Default: aws_orgs_policy_assignments.json")
     parser.add_argument('--verbose', action='store_true', default=False, help=f"Report output every step of the way. Defaults to 'False'")
-    
     arrrrrgs = parser.parse_args()
+    
     return arrrrrgs
 
 
